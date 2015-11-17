@@ -4,7 +4,13 @@ html {
 }
 
 body {
-	width: 50%;
+	margin: 0px;
+	padding: 0px;
+	background: #333333;
+}
+
+#content {
+	width: 66%;
 	height: 100%;
 	background: #FEFEFE;
 	margin: 0px auto;
@@ -23,4 +29,24 @@ h2 {
 
 p {
 	font-size: 22px;
+}
+
+#teaser {
+	font-size: 26px;
+}
+
+#links a {
+	text-align: center;
+	font-size: 24px;
+	color: black;
+}
+
+#links {
+	text-align: center;
+}
+
+.artDemo {
+	max-width: 400px;
+	max-height: 400px;
+	margin: auto, 0px;
 }

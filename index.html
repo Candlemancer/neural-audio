@@ -5,15 +5,21 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<div id="content">		
 	<h1>
 		An Algorithm for Identifying and Separating Musical Content and Style
 	</h1>
 
-	<p>Github | Research Paper | Neural-Style | Torch</p>
+	<p id="links">
+		  <a href="https://github.com/Candlemancer/neural-audio" target="_blank">Github</a>
+		| <a href="http://arxiv.org/abs/1508.06576" target="_blank">Research Paper</a>
+		| <a href="https://github.com/jcjohnson/neural-style" target="_blank">Neural-Style</a> 
+		| <a href="http://torch.ch/" target="_blank">Torch</a> 
+	</p>
 	<br>
 	<br>
 
-	<p>
+	<p id="teaser">
 		This last August, a group of researchers based in Germany created 
 		<a href="http://arxiv.org/abs/1508.06576">an algorithm</a>  
 		that could read in two images and recreate content of one image with the style of the other. Soon thereafter, Justin Johnson created 
@@ -22,6 +28,12 @@
 		</a> 
 		of this algorithm in lua using the torch scientific computing framework. This is a continuation of that project, in which I'm attempting to use this algorithm to study audio data and see if some similar results can be obtained.
 	</p>
+
+	<div id="imageCombination">
+		<img class="artDemo" src="res/me.jpg">
+		<img class="artDemo" src="res/chinese.jpg">
+		<img class="artDemo" src="res/me_chinese.png">
+	</div>
 
 	<br>
 	<br>
@@ -43,6 +55,6 @@
 	<p>
 		This algorithm attempts to replicate that with audio data, and investigate if it's possible to train the algorithm to create new pieces of music by combining the content of one piece with the style of another.
 	</p>
-
+	</div>
 </body>
 </html>
