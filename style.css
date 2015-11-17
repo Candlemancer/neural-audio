@@ -46,7 +46,33 @@ p {
 }
 
 .artDemo {
-	max-width: 400px;
-	max-height: 400px;
-	margin: auto, 0px;
+	max-width: 300px;	
+	max-height: 300px;
+	margin: 0px;
+	top: 10px;
+	vertical-align: middle;
+}
+
+#imageCombination {
+	padding: 30px 0px;
+	max-height: 1300px;
+	max-width: 1300px;
+	margin: 0px;
+	background: #333333;
+	text-align: center;	
+}
+
+#audioCombination {
+	padding: 30px 0px;
+	max-height: 1300px;
+	max-width: 1300px;
+	margin: 0px;
+	background: #333333;
+	text-align: center;	
+}
+
+span.helper {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
 }
