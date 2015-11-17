@@ -4,6 +4,30 @@
 	<title>Nerual Audio</title>
 </head>
 <body>
-	<p>Hello World!</p>
+	<h1>
+		An Algorithm for Identifying and Separating Musical Content and Style
+	</h1>
+
+	<h2>Teaser</h2>
+	<p>
+		This last August, a group of researchers based in Germany created an algorithm that could read in two images and recreate content of one image with the style of the other. Soon thereafter, Justin Johnson created an implementation of this algorithm in lua using the torch scientific computing framework. This is a continuation of that project, in which I'm attempting to use this algorithm to study audio data and see if some similar results can be obtained.
+	</p>
+
+	<h2>What</h2>
+	<p>
+		My algorithm attempts to use the neural-style algorithm developed by Johnson as a black-box function to study audio data. To do this, I've created a set of functions that can encode a .mp3 file into an image representation, feed that representation into the neural network that fuels the image analysis and recombination, and then translates the resulting image back into a .wav file for playback. 
+	</p>
+	<p>
+		There is also a collection of utility functions that aid in analyzing the data through statistical methods.
+	</p>
+
+	<h2>Why</h2>
+	<p>
+		It's long been believed that creating new art would be one of the hardest things to do algorithmically, but the above paper showed that it was at least possible to mimic the way that human art students began learning to create quality pieces, namely by drawing original objects in the style of other artists, or drawing common objects in their own style. 
+	</p>
+	<p>
+		This algorithm attempts to replicate that with audio data, and investigate if it's possible to train the algorithm to create new pieces of music by combining the content of one piece with the style of another.
+	</p>
+
 </body>
 </html>
