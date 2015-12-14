@@ -53,7 +53,7 @@ p {
 	vertical-align: middle;
 }
 
-#imageCombination {
+.graphicDemo {
 	padding: 30px 0px;
 	max-height: 1300px;
 	max-width: 1300px;
@@ -62,17 +62,22 @@ p {
 	text-align: center;	
 }
 
-#audioCombination {
-	padding: 30px 0px;
-	max-height: 1300px;
-	max-width: 1300px;
-	margin: 0px;
-	background: #333333;
-	text-align: center;	
-}
 
 span.helper {
 	display: inline-block;
 	height: 100%;
 	vertical-align: middle;
+}
+
+div.artSet {
+	display: inline-block;
+}
+
+img.icon {
+	height: 100px;
+	width: 100px;
+}
+
+audio {
+	display: inline;
 }
