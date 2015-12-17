@@ -52,7 +52,7 @@
 		My algorithm attempts to use the neural-style algorithm developed by Johnson as a black-box function to study audio data. To do this, I've created a set of functions that can encode a .mp3 file into a Torch tensor that represents each frequency sample as a weight with a value between 0 and 1. We then feed that representation into the neural network that fuels the image analysis and recombination, and take the resulting RGB image, strip off the extra color channels, upconvert the output weights into audible frequencies, and serialize the data into a .wav file.
 	</p>
 	<p>
-		There is also a collection of utility functions that aid in analyzing the data through statistical methods, and rudimentary image processing via a smoothing function to make the output more palatable. 
+		There is also a collection of utility functions and rudimentary image processing via a smoothing function to make the output more palatable. 
 	</p>
 
 	<div class="graphicDemo">
@@ -135,8 +135,192 @@
 	</div>
 
 	<p>
-		Drawbacks aside, this project was very much a success, and it's been interesting to see how an AI designed to solve one problem can be adapted for another. It's also been a great experience to learn about heavy-duty scientific computing in Lua, and I hope to continue my research in this topic.
+		Drawbacks aside, this project was very much a success, and it's been interesting to see how an AI designed to solve one problem can be adapted for another. It's also been a great experience to learn about heavy-duty scientific computing in Lua, and I hope to continue my research in this topic. Below you can find downloads for the collections of data I've gathered, sorted by type.
 	</p>
+
+	<a class="dlinks" href="res/input/clip/clip.zip" download>Download the orignal music clips</a> <br>
+	<a class="dlinks" href="res/output/img/img.zip" download>Download the images generated from the above clips</a> <br>
+
+	<p>If you're downloading the WAV files below, it's recommended you play them with headphones to better hear the differences between them. I've got reports of the files not opening well in some media players, so I've verified each file with <a href="http://www.videolan.org/vlc/index.html">VLC Media Player 2.2.1</a>. If you run into troubles opening the files, try using VLC to open them.</p>
+
+	<table id="downloads">
+		<tr>
+			<th></th>
+			<th>Sine</th>
+			<th>Maid</th>
+			<th>Sleep</th>
+			<th>Reggae</th>
+			<th>Gerudo</th>
+			<th>Nostalgia</th>
+		</tr>
+		<tr>
+			<th>Sine</th>
+			<td>
+				<a href="res/output/combined/sine220_sine220.png" download>Image</a> <br>
+				<a href="res/output/wav/sine220_sine220_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/sine220_maid.png" download>Image</a> <br>
+				<a href="res/output/wav/sine220_maid_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/sine220_sleep.png" download>Image</a> <br>
+				<a href="res/output/wav/sine220_sleep_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/sine220_reggae.png" download>Image</a> <br>
+				<a href="res/output/wav/sine220_reggae_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/sine220_gerudo.png" download>Image</a> <br>
+				<a href="res/output/wav/sine220_gerudo_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/sine220_nostalgia.png" download>Image</a> <br>
+				<a href="res/output/wav/sine220_nostalgia_final.wav" download>Audio</a>
+			</td>
+		</tr>
+		<tr>
+			<th>Maid</th>
+			<td>
+				<a href="res/output/combined/maid_sine220.png" download>Image</a> <br>
+				<a href="res/output/wav/maid_sine220_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/maid_maid.png" download>Image</a> <br>
+				<a href="res/output/wav/maid_maid_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/maid_sleep.png" download>Image</a> <br>
+				<a href="res/output/wav/maid_sleep_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/maid_reggae.png" download>Image</a> <br>
+				<a href="res/output/wav/maid_reggae_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/maid_gerudo.png" download>Image</a> <br>
+				<a href="res/output/wav/maid_gerudo_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/maid_nostalgia.png" download>Image</a> <br>
+				<a href="res/output/wav/maid_nostalgia_final.wav" download>Audio</a>
+			</td>
+		</tr>
+		<tr>
+			<th>Sleep</th>
+			<td>
+				<a href="res/output/combined/sleep_sine220.png" download>Image</a> <br>
+				<a href="res/output/wav/sleep_sine220_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/sleep_maid.png" download>Image</a> <br>
+				<a href="res/output/wav/sleep_maid_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/sleep_sleep.png" download>Image</a> <br>
+				<a href="res/output/wav/sleep_sleep_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/sleep_reggae.png" download>Image</a> <br>
+				<a href="res/output/wav/sleep_reggae_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/sleep_gerudo.png" download>Image</a> <br>
+				<a href="res/output/wav/sleep_gerudo_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/sleep_nostalgia.png" download>Image</a> <br>
+				<a href="res/output/wav/sleep_nostalgia_final.wav" download>Audio</a>
+			</td>
+		</tr>
+		<tr>
+			<th>Reggae</th>
+			<td>
+				<a href="res/output/combined/reggae_sine220.png" download>Image</a> <br>
+				<a href="res/output/wav/reggae_sine220_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/reggae_maid.png" download>Image</a> <br>
+				<a href="res/output/wav/reggae_maid_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/reggae_sleep.png" download>Image</a> <br>
+				<a href="res/output/wav/reggae_sleep_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/reggae_reggae.png" download>Image</a> <br>
+				<a href="res/output/wav/reggae_reggae_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/reggae_gerudo.png" download>Image</a> <br>
+				<a href="res/output/wav/reggae_gerudo_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/reggae_nostalgia.png" download>Image</a> <br>
+				<a href="res/output/wav/reggae_nostalgia_final.wav" download>Audio</a>
+			</td>
+		</tr>
+		<tr>
+			<th>Gerudo</th>
+			<td>
+				<a href="res/output/combined/gerudo_sine220.png" download>Image</a> <br>
+				<a href="res/output/wav/gerudo_sine220_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/gerudo_maid.png" download>Image</a> <br>
+				<a href="res/output/wav/gerudo_maid_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/gerudo_sleep.png" download>Image</a> <br>
+				<a href="res/output/wav/gerudo_sleep_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/gerudo_reggae.png" download>Image</a> <br>
+				<a href="res/output/wav/gerudo_reggae_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/gerudo_gerudo.png" download>Image</a> <br>
+				<a href="res/output/wav/gerudo_gerudo_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/gerudo_nostalgia.png" download>Image</a> <br>
+				<a href="res/output/wav/gerudo_nostalgia_final.wav" download>Audio</a>
+			</td>
+		</tr>
+		<tr>
+			<th>Nostalgia</th>
+			<td>
+				<a href="res/output/combined/nostalgia_sine220.png" download>Image</a> <br>
+				<a href="res/output/wav/nostalgia_sine220_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/nostalgia_maid.png" download>Image</a> <br>
+				<a href="res/output/wav/nostalgia_maid_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/nostalgia_sleep.png" download>Image</a> <br>
+				<a href="res/output/wav/nostalgia_sleep_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/nostalgia_reggae.png" download>Image</a> <br>
+				<a href="res/output/wav/nostalgia_reggae_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/nostalgia_gerudo.png" download>Image</a> <br>
+				<a href="res/output/wav/nostalgia_gerudo_final.wav" download>Audio</a>
+			</td>
+			<td>
+				<a href="res/output/combined/nostalgia_nostalgia.png" download>Image</a> <br>
+				<a href="res/output/wav/nostalgia_nostalgia_final.wav" download>Audio</a>
+			</td>
+		</tr>
+	</table>
+
+	<p>
+		To generate your own data, you'll need to clone the repository, update the neural-style submodule, install torch7, loadcaffe, libsox v14.3.2 or newer, and libfftw3. All of these can be installed via the brew package manager on OS X or through luarocks on Windows. Further documentation can be found at the <a href="https://github.com/soumith/lua---audio">Lua Audio Project</a> and <a href="https://github.com/jcjohnson/neural-style">Neural-Style Repository</a>. Then change the paths in audioTest.lua to valid file paths, copy the audioTest.lua file into the neural-style folder, run neural-style/models/download_models.sh, and then run audioTest.lua.
+	</p>
+
 
 	</div>
 

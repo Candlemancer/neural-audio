@@ -81,3 +81,25 @@ img.icon {
 audio {
 	display: inline;
 }
+
+#downloads{
+	margin: 0px auto;
+}
+
+td {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #333333;
+	text-align: center;
+	padding: 10px;
+}
+
+.dlinks {
+	margin: 0px auto;
+	font-size: 22px;
+}
+
+
+th {
+	font-size: 22px;
+}
