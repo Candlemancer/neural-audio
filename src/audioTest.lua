@@ -90,23 +90,23 @@ function postProcessing(rawAudio, length, multiplier)
 
     -- Smoothing Function
     ----------------------------------------------------------
-    local SMOOTH_WIDTH = 50;
-    local blended = {}
-    for i=1, SMOOTH_WIDTH do
-        blended[i] = rawAudio[i]
-        blended[length - i + 1] = rawAudio[length - i + 1]
-    end
+    -- local SMOOTH_WIDTH = 50;
+    -- local blended = {}
+    -- for i=1, SMOOTH_WIDTH do
+        -- blended[i] = rawAudio[i]
+        -- blended[length - i + 1] = rawAudio[length - i + 1]
+    -- end
 
-    for i = SMOOTH_WIDTH, length - SMOOTH_WIDTH do 
-        local sum = rawAudio[i]
-        for j = 1, SMOOTH_WIDTH - 1 do
-            sum = sum + rawAudio[i - j]
-            sum = sum + rawAudio[i + j]
-        end
+    -- for i = SMOOTH_WIDTH, length - SMOOTH_WIDTH do 
+    --     local sum = rawAudio[i]
+    --     for j = 1, SMOOTH_WIDTH - 1 do
+    --         sum = sum + rawAudio[i - j]
+    --         sum = sum + rawAudio[i + j]
+    --     end
 
-        blended[i] = (math.sin(1/220 * i)) * sum / (SMOOTH_WIDTH * 2 + 1)
+    --     blended[i] = (math.sin(1/220 * i)) * sum / (SMOOTH_WIDTH * 2 + 1)
 
-    end
+    -- end
 
     -- Polarizing Function
     ----------------------------------------------------------
@@ -116,8 +116,7 @@ function postProcessing(rawAudio, length, multiplier)
     -- end
 
     for i = 1, length do
-        -- print(blended)
-        rawAudio[i] = blended[i] * multiplier
+        rawAudio[i] = rawAudio[i] * multiplier
     end
 
     local stereo = torch.cat(rawAudio, rawAudio, 2)
@@ -136,8 +135,8 @@ end
 
 -- ============================================================================================= --
 
-name1 = "reggae"
-name2 = "reggae"
+name1 = "sine220"
+name2 = "sine220"
 
 clip1, rate1 = clipMusic("../input/full/" .. name1 .. ".mp3")
 clip2, rate2 = clipMusic("../input/full/" .. name2 .. ".mp3")
@@ -150,14 +149,16 @@ image2 = makeImage(clip2)
 image.save("../output/img/" .. name1 .. ".png", image1)
 image.save("../output/img/" .. name2 .. ".png", image2)
 
-if path.exists("../output/combined/" .. name1 .. "_" .. name2 .. ".png") == false then
+if not pcall(path.exists("../output/combined/" .. name1 .. "_" .. name2 .. ".png")) then
     runNeuralStyle("../output/combined/" .. name1 .. "_" .. name2 .. ".png", 
                    "../output/img/" .. name1 .. ".png", 
                     "../output/img/" .. name2 .. ".png", 
                     100)
 end
+print("ASDF")
 
 local combined = loadCombination("../output/combined/" .. name1 .. "_" .. name2 .. ".png")
 combined = postProcessing(combined, IMAGE_WIDTH * IMAGE_HEIGHT, max);
 
-audio.save("../output/wav/" .. name1 .. "_" .. name2 .. "_smooth.wav", combined, rate1)
+
+audio.save("../output/wav/" .. name1 .. "_" .. name2 .. "_final.wav", combined, rate1)
